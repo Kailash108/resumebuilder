@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <title>Resume Builder</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="tool.css">
+        <script src="toolScript.js"></script>
+    </head>
+    <body>
+        <center>
+            <h1>Welcome!!!</h1>
+            <br><br>
+            <h1>This website asks your details and at the end you'll be provided a basic e-resume.</h1>
+            <h1>Fill The Details & Click On SUBMIT to see the generated resume</h1>
+            <pre>More Features & Functionalities Will Be Added In Future<br>See The Developer Of This Page --> <a href="https://kailash108.github.io/kailash">Here</a></pre>
+            <br><br>
+            <form>
+                <div class="jumbotron container">
+                    
+                    <h2>Personal Details: </h2>
+                    <input id="name" type="text" placeholder="Name"><br><br>
+                    <input id="email" type="email" placeholder="E-Mail"><br><br>
+                    <input id="phno" type="tel" maxlength="10" placeholder="Phone Number(+91)"><br><br>
+                    <input id="city" type="text" placeholder="City Of Residence">
+                    
+                    <h2>Educational Details: </h2>
+                    <p>Class X</p>
+                    <input id="name10" type="text" placeholder="School Name & City"><br><br>
+                    <input id="board10" type="text" placeholder="Board"><br><br>
+                    <input id="yoc10" type="tel" maxlength="4" placeholder="Year Of Completion"><br><br>
+                    <input id="grade10" type="text" maxlength="5" placeholder="CGPA Or Percentage"><br><br>
+                    
+                    <p>Class XII</p>
+                    <input id="name11" type="text" placeholder="School Name & City"><br><br>
+                    <input id="board11" type="text" placeholder="Board"><br><br>
+                    <input id="yoc11" type="tel" maxlength="4" placeholder="Year Of Completion"><br><br>
+                    <input id="grade11" type="text" maxlength="5" placeholder="CGPA Or Percentage"><br><br>
+                    
+                    <p>Under Graduation</p>
+                    <input id="nameGrad" type="text" placeholder="Name Of The University"><br><br>
+                    <input id="univDept" type="text" placeholder="Department"><br><br>
+                    <input id="yocGrad" type="tel" maxlength="4" placeholder="Year Of Completion"><br><br>
+                    <input id="gradeGrad" type="text" maxlength="5" placeholder="CGPA Or Percentage"><br><br>
+                    
+                    <h2>Positions Of Responsibilty</h2>
+                    <textarea id="por" rows="5" cols="50" placeholder="If you have multiple positions. Write '<br>' Between the positions Eg: pos1<br>pos2"></textarea>
+                    
+                    <h2>Trainings</h2>
+                    <input id="couname" type="text" placeholder="Name Of The Training">
+                    <input id="couclg" type="text" placeholder="Offered University/Industry">
+                    <input id="coudur" type="text" placeholder="Duration">
+                    <br><br>
+                    <input id="couname1" type="text" placeholder="Name Of The Training">
+                    <input id="couclg1" type="text" placeholder="Offered University/Industry">
+                    <input id="coudur1" type="text" placeholder="Duration">
+                    
+                    <h2>Projects</h2>
+                    <input id="projname1" type="text" placeholder="Name Of The project"><br>
+                    <textarea id="projdesc1" rows="5" cols="22" placeholder="Description"></textarea><br>
+                    <input id="projdur1" type="text" placeholder="Duration"><br>
+                    <input id="projlink1" type="text" placeholder="Link">
+                    <br><br>
+                    <input id="projname2" type="text" placeholder="Name Of The project"><br>
+                    <textarea id="projdesc2" rows="5" cols="22" placeholder="Description"></textarea><br>
+                    <input id="projdur2" type="text" placeholder="Duration"><br>
+                    <input id="projlink2" type="text" placeholder="Link">
+                    
+                    <h2>Skills</h2>
+                    <input id="s1" type="text" placeholder="Skill-1">
+                    <input id="s2" type="text" placeholder="Skill-2">
+                    <input id="s3" type="text" placeholder="Skill-3">
+                    <input id="s4" type="text" placeholder="Skill-4">
+                    <input id="s5" type="text" placeholder="Skill-5">
+                    <input id="s6" type="text" placeholder="Skill-6">
+
+                </div>
+            </form>
+            <button onclick="func()" type="submit">Submit</button>
+            <h3 id="scrolldown"></h3>
+        </center>
+        <div id="design">
+            <center><h2 id="heading"></h2></center>
+            <p id="name1"></p>
+            <p id="email1"></p>
+            <p id="phno1"></p>
+            <p id="city1"></p>
+            <hr>
+            <center><h2 style="color: lightgreen;" id="educ1"></h2></center>
+            <div>
+                <h4 id="class10"></h4>
+                <p id="yoc10i"></p>
+                <p id="board10i"></p>
+                <p id="name10i"></p>
+                <p id="grade10i"></p>
+            </div>
+            <div>
+            <h4 id="class11"></h4>
+                <p id="yoc11i"></p>
+                <p id="board11i"></p>
+                <p id="name11i"></p>
+                <p id="grade11i"></p>
+            </div>
+            <div>
+            <h4 id="classug"></h4>
+                <p id="yocug"></p>
+                <p id="nameug"></p>
+                <p id="deptug"></p>
+                <p id="gradeug"></p>
+            </div>
+            <hr>
+            <center><h2 style="color: lightgreen;" id="po"></h2></center>
+            <p id="por1"></p>
+            <hr>
+            <center><h2 style="color: lightgreen;" id="trai"></h2></center>
+            <p id="counamei"></p>
+            <p id="couclgi"></p>
+            <p id="couduri"></p>
+            <br>
+            <p id="counameii"></p>
+            <p id="couclgii"></p>
+            <p id="coudurii"></p>
+            <hr>
+            <center><h2 style="color: lightgreen;" id="proj"></h2></center>
+            <p id="projnamei"></p>
+            <p id="projdesci"></p>
+            <p id="projduri"></p>
+            <p id="projlinki"></p>
+            <br>
+            <p id="projnameii"></p>
+            <p id="projdescii"></p>
+            <p id="projdurii"></p>
+            <p id="projlinkii"></p>
+            <hr>
+            <center><h2 style="color: lightgreen;" id="skills"></h2></center>
+            <p id="sk1"></p>
+            <p id="sk2"></p>
+            <p id="sk3"></p>
+            <p id="sk4"></p>
+            <p id="sk5"></p>
+            <p id="sk6"></p>
+        </div>
+    </body>
+</html>
